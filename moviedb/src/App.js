@@ -7,7 +7,7 @@ import MoviesGrid from './components/MoviesGrid';
 function App() {
   return (
     <div className="App">
-      <div className='container'>
+      <div className="container">
         <Header></Header>
         <MoviesGrid></MoviesGrid>
       </div>
