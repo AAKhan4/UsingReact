@@ -77,7 +77,7 @@ export default function MoviesGrid() {
             );
           })
           .map((movie) => {
-            return <MovieCard movie={movie} key={movie.id}></MovieCard>;
+            return <MovieCard movie={movie} key={movie.id} />;
           })}
       </div>
     </div>
