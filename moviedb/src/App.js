@@ -1,9 +1,9 @@
-import './App.css';
-import './styles.css';
-import  Header from './components/Header';
-import  Footer from './components/Footer';
-import MoviesGrid from './components/MoviesGrid';
-import Watchlist from './components/Watchlist';
+import "./App.css";
+import "./styles.css";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import MoviesGrid from "./components/MoviesGrid";
+import Watchlist from "./components/Watchlist";
 import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
 
 function App() {
@@ -30,6 +30,7 @@ function App() {
           </Routes>
         </Router>
       </div>
+
       <Footer />
     </div>
   );
