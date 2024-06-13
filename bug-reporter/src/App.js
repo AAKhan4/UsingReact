@@ -9,6 +9,7 @@ import TicketList from "./components/TicketList";
 function App() {
   const initState = {
     tickets: [],
+    editingTicket: null,
   };
 
   const [state, dispatch] = useReducer(ticketReducer, initState);
