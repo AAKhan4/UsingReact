@@ -14,6 +14,10 @@ export default function ticketReducer(state, action) {
         ...state,
         tickets: state.tickets.filter((ticket) => ticket.id !== action.payload),
       };
+    case "EDIT_TICKET":
+      return { ...state, editingTicket: action.payload };
+    case "CANCEL_EDIT":
+      return { ...state, editingTicket: null };
     default:
       return state;
   }
