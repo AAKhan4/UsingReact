@@ -32,6 +32,14 @@ export default function TicketForm() {
                 className="form-input"
                 onChange={(e) => setTitle(e.target.value)} />
         </div>
+        <div>
+            <label>Description</label>
+            <textarea
+                type="text"
+                value={description}
+                className="form-input"
+                onChange={(e) => setDescription(e.target.value)} />
+        </div>
     </form>
 );
 }
