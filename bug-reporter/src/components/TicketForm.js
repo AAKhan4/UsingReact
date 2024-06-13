@@ -24,22 +24,24 @@ export default function TicketForm() {
 
   return (
     <form onSubmit={handleSubmit} className="ticket-form">
-        <div>
-            <label>Title</label>
-            <input
-                type="text"
-                value={title}
-                className="form-input"
-                onChange={(e) => setTitle(e.target.value)} />
-        </div>
-        <div>
-            <label>Description</label>
-            <textarea
-                type="text"
-                value={description}
-                className="form-input"
-                onChange={(e) => setDescription(e.target.value)} />
-        </div>
+      <div>
+        <label>Title</label>
+        <input
+          type="text"
+          value={title}
+          className="form-input"
+          onChange={(e) => setTitle(e.target.value)}
+        />
+      </div>
+      <div>
+        <label>Description</label>
+        <textarea
+          type="text"
+          value={description}
+          className="form-input"
+          onChange={(e) => setDescription(e.target.value)}
+        />
+      </div>
     </form>
-);
+  );
 }
