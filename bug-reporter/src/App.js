@@ -18,7 +18,7 @@ function App() {
     <div className="App">
       <div className="container">
         <h1>Bug Report</h1>
-        <TicketForm dispatch={dispatch} />
+        <TicketForm dispatch={dispatch} editingTicket={state.editingTicket} />
 
         {state.tickets.length > 0 && (
           <div className="results">
