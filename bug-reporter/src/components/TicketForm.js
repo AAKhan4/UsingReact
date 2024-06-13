@@ -65,7 +65,7 @@ export default function TicketForm({ dispatch, editingTicket }) {
           onChange={(e) => setDescription(e.target.value)}
         />
       </div>
-      <fieldset className="priotity-fieldset">
+      <fieldset className="priority-fieldset">
         <legend>Priority</legend>
         {Object.entries(prorities).map(([key, value]) => (
           <label key={key} className="priority-label">
