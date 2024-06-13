@@ -17,5 +17,21 @@ export default function TicketForm() {
     setPriority("low");
   };
 
-  return <></>;
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    clearForm();
+  };
+
+  return (
+    <form onSubmit={handleSubmit} className="ticket-form">
+        <div>
+            <label>Title</label>
+            <input
+                type="text"
+                value={title}
+                className="form-input"
+                onChange={(e) => setTitle(e.target.value)} />
+        </div>
+    </form>
+);
 }
