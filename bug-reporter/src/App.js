@@ -16,7 +16,7 @@ function App() {
     <div className="App">
       <div className="container">
         <h1>Bug Report</h1>
-        <TicketForm />
+        <TicketForm dispatch={dispatch} />
       </div>
     </div>
   );
