@@ -10,6 +10,7 @@ function App() {
   const initState = {
     tickets: [],
     editingTicket: null,
+    sortRef: "high-low",
   };
 
   const [state, dispatch] = useReducer(ticketReducer, initState);
