@@ -1,6 +1,6 @@
 import { createContext } from "react";
 
-const UserInfoContext = createContext({
+export const UserInfoContext = createContext({
   username: "guest",
   isAdmin: false,
 });
