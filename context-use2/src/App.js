@@ -1,11 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { ThemeProvider } from "./context/ThemeProvider";
+import ContentComponent from "./components/ContentComponent";
 
 function App() {
   return (
-    <div>
-      
-    </div>
+    <ThemeProvider>
+      <ContentComponent />
+    </ThemeProvider>
   );
 }
 
