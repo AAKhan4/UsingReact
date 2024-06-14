@@ -7,7 +7,7 @@ export default function ContentComponent() {
 
   return (
     <div>
-      Current theme: {theme}
+      Current theme: {theme === "l" ? "light" : "dark"}
       <button onClick={toggleTheme()}>Toggle Theme</button>
     </div>
   );
