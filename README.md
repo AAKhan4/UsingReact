@@ -1,2 +1,2 @@
-# MovieAPI
-Frontend Movie API Project
+# Using React
+Number of mini APIs made to practice use of ReactJS
