@@ -5,7 +5,7 @@ export default function Posts() {
     const [posts, setPosts] = useState([]);
     useEffect(() => {
         console.log("Fetching posts");
-    });
+    }, []);
 
     return (
         <div>
