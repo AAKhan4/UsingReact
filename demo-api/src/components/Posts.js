@@ -1,15 +1,29 @@
-import React, { useState, useEffect } from 'react';
-import { getPosts } from '../services/postService';
+import React, { useState, useEffect } from "react";
+import { getPosts } from "../services/postService";
 
 export default function Posts() {
-    const [posts, setPosts] = useState([]);
-    useEffect(() => {
-        console.log("Fetching posts");
-    }, []);
+  const [posts, setPosts] = useState([]);
+  useEffect(() => {
+    getPosts()
+      .then((response) => {
+        setPosts(response.data);
+      })
+      .catch((e) => {
+        console.error(e);
+      });
+  }, []);
 
-    return (
-        <div>
-            <h1>Posts</h1>
-        </div>
-    );
+  return (
+    <div>
+      <h1>Posts</h1>
+      <ul>
+        {posts.map((post) => (
+          <li key={post.id}>
+            <h2>{post.title}</h2>
+            <p>{post.body}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 }
