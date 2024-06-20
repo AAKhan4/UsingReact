@@ -22,7 +22,7 @@ export default function PostForm(posts, setPosts) {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit()}>
         <div>Title</div>
         <input
           type="text"
