@@ -10,6 +10,8 @@ import {
 } from "react-router-dom";
 import BookDetails from "./components/BookDetails";
 import NotFound from "./components/NotFound";
+import SecretBooks from "./components/SecretBooks";
+import PrivateRoute from "./components/PrivateRoute";
 
 function App() {
   return (
@@ -20,6 +22,10 @@ function App() {
             <Route path="/" element={<Books />} />
             <Route path="/books" element={<Navigate to="/" />} />
             <Route path="/books/:bid" element={<BookDetails />} />
+            <Route
+              path="/secret"
+              element={<PrivateRoute component={<SecretBooks />} />}
+            />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Router>
