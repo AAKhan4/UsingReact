@@ -2,12 +2,20 @@ import logo from "./logo.svg";
 import "./App.css";
 import { BooksProvider } from "./contexts/BooksContext";
 import Books from "./components/Books";
+import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
+import BookDetails from "./components/BookDetails";
 
 function App() {
   return (
     <BooksProvider>
       <div className="App">
-        <Books />
+        <Router>
+          <Routes>
+            <Route path="/" element={<Books />} />
+            <Route path="/books" element={<Navigate to="/" />} />
+            <Route path="/books/:bid" element={<BookDetails />} />
+          </Routes>
+        </Router>
       </div>
     </BooksProvider>
   );
